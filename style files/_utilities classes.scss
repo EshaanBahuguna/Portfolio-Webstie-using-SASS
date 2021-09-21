@@ -1,0 +1,40 @@
+// Utilities classes
+.container{
+    max-width: 1270px;
+    margin: auto;
+}
+.current{
+    border-bottom: 2px solid $main-color;
+}
+%btn-shared{
+    padding: 15px 30px;
+    text-transform: capitalize;
+    transition: background 0.5s;
+
+}
+.btn-light{
+    @extend %btn-shared;
+    background: $light-color;
+    
+    &:hover{
+        background: $main-color;
+    }
+}
+.btn-dark{
+    @extend %btn-shared;
+    background: $dark-color;
+    color: $light-color;
+    border: none;
+    border-radius: 2px;
+
+    &:hover{
+        background: $main-color;
+    }
+}
+.bottom-line{
+    border: 1px solid $main-color;
+    width: 3%;
+    margin: 20px;
+    position: relative;
+    left: 47%;
+}

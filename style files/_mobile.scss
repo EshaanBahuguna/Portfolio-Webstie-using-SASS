@@ -1,0 +1,241 @@
+// Tablets
+@media(max-width: 768px){
+
+    // Home page
+    header{
+        height: 80vh;
+    
+        nav{
+            .container{
+                flex-direction: column;
+
+                ul{
+                    margin-top: 20px; 
+                }
+            }
+        }
+        #header-content{
+            padding: 200px; 
+
+            p{
+                &:first-child{
+                    font-size: 3rem;
+                }
+                span{
+                    display: block;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+    #home-section{
+        &-a > div:last-child, &-c > div:last-child, &-b{
+            grid-template-columns: 1fr;
+        }
+        &-a > div:last-child, &-c > div:last-child{
+            div{
+                margin-bottom: 20px;
+                border-bottom: 1px solid $main-color;
+                padding-bottom: 20px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+            }
+        }
+        &-a{
+            padding-bottom: 10px;
+        }
+        &-b{
+            div{
+                padding: 20px;
+
+                h3{
+                    font-size: 1.7rem;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &-c{
+            div:last-child{
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // About page
+    #about-page{
+        height: 17vh;
+    }
+    #about-section{
+        &-a{
+            h3{
+                padding-top: 10px;
+            }
+        }
+        &-d{
+            & > div:last-child{
+                grid-template-columns: repeat(2, 1fr);
+                grid-row-gap: 1.5rem;
+            }
+        }
+    }
+
+    // Contact page
+    #contact-section{
+        &-a{
+            form{
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// Mobile Phones
+@media(max-width: 600px){
+    
+    // Home page
+    header{
+        #header-content{
+            padding: 50px;
+            padding-top: 90px;
+
+            p:first-child{
+                font-size: 2.5rem;
+            }
+            p:nth-child(2){
+                font-size: 1.1rem;
+            }
+            a{
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .bottom-line{
+        width: 20%;
+        left: 35%;
+    }
+    #home-section{
+        &-b{
+            div{
+                h3{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        &-c{
+            & > div:last-child{
+                grid-gap: 0.5rem;
+
+                & > div > div{
+                    height: 130px;
+                    width: 130px;
+
+                    div{
+                        height: 40px;
+                        width: 40px;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // About page
+    #about-page{
+        height: 20vh;
+    }
+    #about-section{
+        &-a{
+            .container{
+                grid-template-areas:
+                'img'
+                'bio'
+                'aw1'
+                'aw2'
+                'aw3';
+            }
+        }
+        &-c{
+            display: none;
+        }
+        &-d{
+            padding: 40px 20px;
+            padding-bottom: 60px;
+
+            & > div:last-child{
+                grid-template-columns: 1fr;
+
+                ul{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    // Work Page
+    #work{
+        .container > div:last-child{
+            grid-template-columns: 1fr;
+            padding: 0 20px;
+        }
+    }
+
+    // Contact Page
+    #contact-section{
+        &-a{
+            form{
+                grid-template-columns: 1fr;
+
+                textarea{
+                    grid-column: 1/2;
+                    margin-top: 10px;
+                }
+            }
+        }
+        &-b{
+            padding: 20px 0;
+            .container{
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+
+                div{
+                    i{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        &-c{
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
+
+    footer{
+        flex-direction: column;
+
+        ul{
+            margin-top: 20px;
+        }
+    }
+}
+
+@media(max-width: 360px){
+    #about-page{
+        height: 21vh;
+
+        nav{
+            img{
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+}
